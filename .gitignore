@@ -1,0 +1,29 @@
+# Development artefacts — do not push
+extractor-old.py
+dashboard-old.py
+dashboard-2.py
+dashboard.py.save
+fix_extractor.py
+write_extractor.py
+filter_layer.py
+llm_reviewer.py
+cleanup.py
+
+# Terminal output files
+*.txt
+*.py.save
+Terminal\ Saved\ Output.py
+Polis_Terminal\ Saved\ Output.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+.venv/
+venv/
+
+# Mac
+.DS_Store
