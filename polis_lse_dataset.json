@@ -382,7 +382,7 @@
     "secondary_theory": "none",
     "domain": "general",
     "leadership_mode": "proactive",
-    "rationale": "Text appears to be in Arabic script but is unclear or corrupted, providing no observable behavioral signals to analyze",
+    "rationale": "Evidence text appears to be in non-readable format preventing behavioral signal analysis",
     "needs_llm_review": false,
     "confidence_score": 7,
     "source_tier": "T0",
@@ -419,8 +419,8 @@
     },
     "needs_scoring": false,
     "model_version": "claude-sonnet-4-20250514",
-    "scoring_date": "2026-05-18",
-    "scoring_run_id": "629135e0",
+    "scoring_date": "2026-05-19",
+    "scoring_run_id": "2a0f9d51",
     "prompt_version": "6106c3ea"
   },
   {
