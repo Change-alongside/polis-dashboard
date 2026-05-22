@@ -7941,5 +7941,590 @@
     "scoring_date": "2026-05-18",
     "scoring_run_id": "629135e0",
     "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "2bea1d049829b392",
+    "date": "2026-05-18",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Morocco",
+    "president": "Mohammed VI",
+    "actor": "mohammed vi",
+    "actor_type": "presidential",
+    "action_type": "policy",
+    "domain": "security",
+    "framing": "neutral",
+    "filter_score": 6,
+    "source_tier": "T0",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "\u0627\u0644\u0631\u0628\u0627\u0637 \u062a\u062d\u062a\u0636\u0646 \u0641\u0639\u0627\u0644\u064a\u0627\u062a \u0627\u0644\u062f\u0648\u0631\u0629 \u0627\u0644\u0633\u0627\u0628\u0639\u0629 \u0644\u0623\u064a\u0627\u0645 \u0627\u0644\u0623\u0628\u0648\u0627\u0628 \u0627\u0644\u0645\u0641\u062a\u0648\u062d\u0629 \u0644\u0644\u0623\u0645\u0646 \u0627\u0644\u0648\u0637\u0646\u064a",
+    "link": "https://www.maroc.ma/ar/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B1%D8%A8%D8%A7%D8%B7-%D8%AA%D8%AD%D8%AA%D8%B6%D9%86-%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D8%A7%D8%A8%D8%B9%D8%A9-%D9%84%D8%A3%D9%8A%D8%A7%D9%85-%D8%A7%D9%84%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D9%84%D9%84%D8%A3%D9%85%D9%86-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "8ff12641f8a19dd8",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Ghana",
+    "president": "Mahama",
+    "actor": "mahama",
+    "actor_type": "presidential",
+    "action_type": "policy",
+    "domain": "economy",
+    "framing": "crisis",
+    "filter_score": 7,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 4,
+    "context": "governance",
+    "evidence": "Woman accused of threatening President Mahama granted GH\u00a21 million bail",
+    "link": "https://www.myjoyonline.com/woman-accused-of-threatening-president-mahama-granted-gh%c2%a21-million-bail/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "6f36683eaf2d33c9",
+    "date": "2026-05-21",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Ghana",
+    "president": "Mahama",
+    "actor": "mahama",
+    "actor_type": "presidential",
+    "action_type": "policy",
+    "domain": "health",
+    "framing": "crisis",
+    "filter_score": 6,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 4,
+    "context": "governance",
+    "evidence": "Ghana's Free Primary Healthcare Policy - a Transformational Step Toward Health Equity and Minimizing Progression of Intellectual and Develop",
+    "link": "https://allafrica.com/stories/202605210361.html",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "d8dd82404f0f3d3d",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Nigeria",
+    "president": "Tinubu",
+    "actor": "tinubu",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 5,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 5,
+    "context": "governance",
+    "evidence": "Tinubu Hails NDLEA Over Major Transborder Drug Bust",
+    "link": "https://allafrica.com/stories/202605220177.html",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "2b0631af6301c6e3",
+    "date": "2026-05-21",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Nigeria",
+    "president": "Tinubu",
+    "actor": "tinubu",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 4,
+    "source_tier": "T0",
+    "source_bias": "state",
+    "feed_count": 5,
+    "context": "governance",
+    "evidence": "PRESIDENT TINUBU COMMENDS NDLEA ON LANDMARK SUCCESS AGAINST TRANSBORDER DRUG NETWORK",
+    "link": "https://statehouse.gov.ng/president-tinubu-commends-ndlea-on-landmark-success-against-transborder-drug-network/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "97e89eab7ad4f1c5",
+    "date": "2026-05-21",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Nigeria",
+    "president": "Tinubu",
+    "actor": "tinubu",
+    "actor_type": "presidential",
+    "action_type": "appointment",
+    "domain": "governance",
+    "framing": "neutral",
+    "filter_score": 6,
+    "source_tier": "T0",
+    "source_bias": "state",
+    "feed_count": 5,
+    "context": "governance",
+    "evidence": "PRESIDENT TINUBU APPOINTS PROFESSOR SEGUN AINA AS NEW JAMB REGISTRAR",
+    "link": "https://statehouse.gov.ng/president-tinubu-appoints-professor-segun-aina-as-new-jamb-registrar/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "36c6981d6f051d08",
+    "date": "2026-05-19",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Nigeria",
+    "president": "Tinubu",
+    "actor": "tinubu",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 5,
+    "source_tier": "T0",
+    "source_bias": "state",
+    "feed_count": 5,
+    "context": "governance",
+    "evidence": "PRESIDENT TINUBU TO GEN. GOWON: YOUR MEMOIR IS A COMPASS FOR NIGERIA\u2019S FUTURE",
+    "link": "https://statehouse.gov.ng/president-tinubu-to-gen-gowon-your-memoir-is-a-compass-for-nigerias-future/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "313fcd87c8070d37",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Central African Republic",
+    "president": "Touadera",
+    "actor": "touadera",
+    "actor_type": "presidential",
+    "action_type": "appointment",
+    "domain": "governance",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 1,
+    "context": "governance",
+    "evidence": "CAR's President Touad\u00e9ra appoints new government",
+    "link": "http://www.africanews.com/2026/05/22/cars-president-touadera-appoints-new-government/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "f502419f4571c3e1",
+    "date": "2026-05-19",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Ethiopia",
+    "president": "Abiy",
+    "actor": "abiy ahmed",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "governance",
+    "framing": "development",
+    "filter_score": 5,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Prime Minister Abiy Highlights Progress On Major Fertilizer Project With Dangote Group",
+    "link": "https://allafrica.com/stories/202605190766.html",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "bb213359174d0fa9",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "South Sudan",
+    "president": "Kiir",
+    "actor": "salva kiir",
+    "actor_type": "presidential",
+    "action_type": "dismissal",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Puot Kang links Kiir allies to Nasir garrison bloodshed",
+    "link": "https://www.radiotamazuj.org/en/news/article/puot-kang-links-kiir-allies-to-nasir-garrison-bloodshed",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "d68bd717a1b00170",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "South Sudan",
+    "president": "Kiir",
+    "actor": "salva kiir",
+    "actor_type": "presidential",
+    "action_type": "dismissal",
+    "domain": "security",
+    "framing": "crisis",
+    "filter_score": 7,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Prominent Kiir allies accused of plotting Nasir attacks",
+    "link": "https://www.sudanspost.com/prominent-kiir-allies-accused-of-plotting-nasir-attacks/?utm_source=rss&utm_medium=rss&utm_campaign=prominent-kiir-allies-accused-of-plotting-nasir-attacks",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "4c48a7f2f253105a",
+    "date": "2026-05-19",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "South Sudan",
+    "president": "Kiir",
+    "actor": "salva kiir",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "security",
+    "framing": "legitimacy",
+    "filter_score": 7,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Kiir declares airspace sovereignty as Juba launches Advanced Air Traffic system",
+    "link": "https://www.sudanspost.com/kiir-declares-airspace-sovereignty-as-juba-launches-advanced-air-traffic-system/?utm_source=rss&utm_medium=rss&utm_campaign=kiir-declares-airspace-sovereignty-as-juba-launches-advanced-air-traffic-system",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "aadb12c956634fc7",
+    "date": "2026-05-22",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Uganda",
+    "president": "Museveni",
+    "actor": "museveni",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "general",
+    "framing": "development",
+    "filter_score": 5,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "Museveni Hails Karangwa As Loyal NRM Cadre and Champion of Development",
+    "link": "https://allafrica.com/stories/202605220301.html",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": null,
+    "needs_scoring": true
   }
 ]
