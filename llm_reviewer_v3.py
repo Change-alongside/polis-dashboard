@@ -4,7 +4,6 @@ Scores events against five behavioural dimensions.
 Replaces theory classification entirely.
 Run: python3 llm_reviewer_v3.py
 """
-import hashlib
 import json
 import os
 import sys
@@ -69,10 +68,10 @@ Example:
 
 
 def score_event(event):
-    evidence = event.get("evidence", "").encode("ascii", errors="replace").decode("ascii")
-    country  = event.get("country", "").encode("ascii", errors="replace").decode("ascii")
-    domain   = event.get("domain", "").encode("ascii", errors="replace").decode("ascii")
-    action   = event.get("action_type", "").encode("ascii", errors="replace").decode("ascii")
+    evidence = event.get("evidence", "")
+    country  = event.get("country", "")
+    domain   = event.get("domain", "")
+    action   = event.get("action_type", "")
 
     prompt = f"""{DIMENSION_PROMPT}
 
@@ -176,10 +175,19 @@ def run_scoring():
         return
 
     with open(DATASET_FILE, "r") as f:
-        data = json.load(f)
+        raw = json.load(f)
+
+    # Support both flat array (legacy) and metadata-wrapped structure
+    if isinstance(raw, dict) and "events" in raw:
+        metadata = raw.get("metadata", {})
+        data = raw["events"]
+    else:
+        metadata = {}
+        data = raw
 
     # FIX 1: Assign stable event_id to any event that lacks one
     # sha256(evidence + country) — deterministic, collision-resistant for this scale
+    import hashlib
     changed_ids = 0
     for e in data:
         if e.get("is_leadership_event") and "event_id" not in e:
@@ -189,25 +197,17 @@ def run_scoring():
     if changed_ids:
         print("Assigned event_id to {} events".format(changed_ids))
 
-    DIMS = ["accountability","responsiveness","stewardship",
-            "institutional_integrity","inclusion"]
-
-    def has_real_score(e):
-        return any(
-            e.get("dimensions",{}).get(d,{}).get("score") is not None
-            for d in DIMS
-        )
-
+    # Score all leadership events that lack dimension vectors
     to_score = [
         e for e in data
         if e.get("is_leadership_event")
-        and e.get("needs_scoring", True)
-        and not has_real_score(e)
+        and "dimensions" not in e
     ]
 
+    # Also re-score events still carrying old theory labels as primary output
     already_scored = len([e for e in data
                           if e.get("is_leadership_event")
-                          and has_real_score(e)])
+                          and "dimensions" in e])
 
     print("=" * 55)
     print("POLIS DIMENSION SCORER v3.0")
@@ -229,7 +229,7 @@ def run_scoring():
         evidence = event.get("evidence", "")[:60].encode(
             "ascii", errors="replace").decode("ascii")
         country  = event.get("country", "?")
-        print("[{}/{}] {} | {}".format(i + 1, len(to_score), country, evidence.encode("ascii", errors="replace").decode("ascii")))
+        print("[{}/{}] {} | {}".format(i + 1, len(to_score), country, evidence))
 
         result = score_event(event)
 
@@ -273,9 +273,12 @@ def run_scoring():
 
         time.sleep(0.4)
 
-    # Save
+    # Save — preserve metadata wrapper
     with open(DATASET_FILE, "w") as f:
-        json.dump(data, f, indent=2)
+        if metadata:
+            json.dump({"metadata": metadata, "events": data}, f, indent=2, ensure_ascii=False)
+        else:
+            json.dump(data, f, indent=2, ensure_ascii=False)
 
     print("")
     print("=" * 55)

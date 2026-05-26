@@ -101,7 +101,11 @@ def load_data():
     with open(DATASET_FILE, "r") as f:
         raw = json.load(f)
 
-    events = [e for e in raw if e.get("is_leadership_event")]
+    # Support both flat array (legacy) and metadata-wrapped structure
+    if isinstance(raw, dict) and "events" in raw:
+        events = [e for e in raw["events"] if e.get("is_leadership_event")]
+    else:
+        events = [e for e in raw if e.get("is_leadership_event")]
     if not events:
         return pd.DataFrame()
 

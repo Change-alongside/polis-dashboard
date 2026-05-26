@@ -582,6 +582,9 @@ def load_existing() -> list:
     with open(DATASET_FILE, "r") as f:
         existing = json.load(f)
     import hashlib
+    # Support both flat array (legacy) and metadata-wrapped structure
+    if isinstance(existing, dict) and "events" in existing:
+        existing = existing["events"]
     events = [e for e in existing if e.get("is_leadership_event")]
     for e in events:
         # Backfill structural fields for legacy events
@@ -619,6 +622,100 @@ def load_existing() -> list:
 
     return events
 
+def update_metadata(data: dict, combined: list) -> dict:
+    """
+    Update the metadata block on every run.
+    Keeps dataset stats current without manual intervention.
+    """
+    import hashlib
+    from datetime import datetime, timezone
+
+    if not isinstance(data, dict):
+        # Legacy flat array — wrap it
+        data = {"metadata": {}, "events": data}
+
+    if "metadata" not in data:
+        data["metadata"] = {}
+
+    m = data["metadata"]
+
+    # Always update
+    m["polis_version"]      = "8.0"
+    m["dataset_version"]    = m.get("dataset_version", "1.0")
+    m["last_updated"]       = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    m["extractor_version"]  = "v8"
+    m["reviewer_version"]   = "v3.0"
+    m["scoring_model"]      = "claude-sonnet-4-20250514"
+
+    if "theoretical_framework" not in m:
+        m["theoretical_framework"] = {
+            "primary":    "Principal-agent theory",
+            "supporting": "Public leadership literature",
+            "contextual": "Neopatrimonialism (Bratton & van de Walle)"
+        }
+
+    if "dimensions" not in m:
+        m["dimensions"] = [
+            "accountability", "responsiveness", "stewardship",
+            "institutional_integrity", "inclusion"
+        ]
+
+    if "analytic_tensions" not in m:
+        m["analytic_tensions"] = [
+            "formal_institutions_vs_informal_power",
+            "centralisation_vs_accommodation",
+            "visibility_vs_action"
+        ]
+
+    # Recompute stats from current dataset
+    lse = [e for e in combined if e.get("is_leadership_event")]
+    countries = list(set(e.get("country","") for e in lse))
+    presidents = list(set(e.get("president","") for e in lse if e.get("president")))
+    domains = {}
+    for e in lse:
+        d = e.get("domain","general")
+        domains[d] = domains.get(d,0) + 1
+    scored = sum(1 for e in lse if any(
+        e.get("dimensions",{}).get(dim,{}).get("score") is not None
+        for dim in ["accountability","responsiveness","stewardship",
+                    "institutional_integrity","inclusion"]
+    ))
+
+    m["geographic_scope"] = {
+        "target_countries":   54,
+        "covered_countries":  len(countries),
+        "regions": ["North Africa","West Africa","Central Africa",
+                    "East Africa","Southern Africa"]
+    }
+
+    m["dataset_stats"] = {
+        "total_events":        len(combined),
+        "leadership_events":   len(lse),
+        "scored_events":       scored,
+        "needs_scoring":       sum(1 for e in lse if e.get("needs_scoring")),
+        "countries_with_data": len(countries),
+        "presidents_tracked":  len(presidents),
+        "domain_distribution": domains
+    }
+
+    if "observability_note" not in m:
+        m["observability_note"] = (
+            "Scores reflect observable signals in reported news events, "
+            "not governance outcomes. Absence of signal is not evidence "
+            "of absence of behaviour. Countries with fewer than 30 events "
+            "should be interpreted with caution."
+        )
+
+    if "citation" not in m:
+        m["citation"] = (
+            "POLIS - Public Leadership Observation & Insight System. "
+            "Change-alongside, 2026. https://polis-dashboard.streamlit.app"
+        )
+
+    data["metadata"] = m
+    return data
+
+
 def save_cumulative(new_results: list):
     existing       = load_existing()
     existing_links = set(e.get("link","")     for e in existing)
@@ -632,8 +729,11 @@ def save_cumulative(new_results: list):
     ]
 
     combined = existing + new_events
+    # Wrap in metadata structure and update stats
+    wrapped = update_metadata({"events": combined}, combined)
+
     with open(DATASET_FILE, "w") as f:
-        json.dump(combined, f, indent=2)
+        json.dump(wrapped, f, indent=2, ensure_ascii=False)
 
     domains  = {}
     needs_scoring = 0
