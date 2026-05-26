@@ -382,7 +382,7 @@
     "secondary_theory": "none",
     "domain": "general",
     "leadership_mode": "proactive",
-    "rationale": "Evidence text appears to be in non-readable format preventing behavioral signal analysis",
+    "rationale": "Text appears corrupted or encoded, preventing observation of any behavioral signals",
     "needs_llm_review": false,
     "confidence_score": 7,
     "source_tier": "T0",
@@ -419,8 +419,8 @@
     },
     "needs_scoring": false,
     "model_version": "claude-sonnet-4-20250514",
-    "scoring_date": "2026-05-19",
-    "scoring_run_id": "2a0f9d51",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
     "prompt_version": "6106c3ea"
   },
   {
@@ -7984,8 +7984,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Cannot analyze behavioral signals from text in Arabic script without translation",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8021,16 +8026,21 @@
         "confidence": null
       },
       "institutional_integrity": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "high"
       },
       "inclusion": {
         "score": null,
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Judicial system processing case against someone who threatened the president demonstrates institutional independence from executive interference.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8058,24 +8068,29 @@
         "confidence": null
       },
       "responsiveness": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "stewardship": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "medium"
       },
       "institutional_integrity": {
         "score": null,
         "confidence": null
       },
       "inclusion": {
-        "score": null,
-        "confidence": null
+        "score": 0.6,
+        "confidence": "low"
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Free primary healthcare policy directly addresses public health needs and builds long-term health system capacity while targeting equity concerns.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8103,24 +8118,29 @@
         "confidence": null
       },
       "responsiveness": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "stewardship": {
         "score": null,
         "confidence": null
       },
       "institutional_integrity": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "high"
       },
       "inclusion": {
         "score": null,
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "President publicly endorses law enforcement agency's operational success, demonstrating support for institutional drug enforcement capabilities.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8144,28 +8164,38 @@
     "link": "https://statehouse.gov.ng/president-tinubu-commends-ndlea-on-landmark-success-against-transborder-drug-network/",
     "dimensions": {
       "accountability": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium",
+        "rationale": "President publicly commends law enforcement agency for successful anti-drug operations, signaling support for institutional enforcement activities."
       },
       "responsiveness": {
         "score": null,
-        "confidence": null
+        "confidence": null,
+        "rationale": null
       },
       "stewardship": {
         "score": null,
-        "confidence": null
+        "confidence": null,
+        "rationale": null
       },
       "institutional_integrity": {
         "score": null,
-        "confidence": null
+        "confidence": null,
+        "rationale": null
       },
       "inclusion": {
         "score": null,
-        "confidence": null
+        "confidence": null,
+        "rationale": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8197,20 +8227,25 @@
         "confidence": null
       },
       "stewardship": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "institutional_integrity": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "high"
       },
       "inclusion": {
         "score": null,
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "President exercises formal appointment authority for key educational institution leadership position.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8242,8 +8277,8 @@
         "confidence": null
       },
       "stewardship": {
-        "score": null,
-        "confidence": null
+        "score": 0.6,
+        "confidence": "low"
       },
       "institutional_integrity": {
         "score": null,
@@ -8254,8 +8289,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "President endorses historical memoir as guidance for future national direction, suggesting investment in learning from institutional memory.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8291,16 +8331,21 @@
         "confidence": null
       },
       "institutional_integrity": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "inclusion": {
         "score": null,
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Presidential appointment of government suggests exercise of formal executive authority through established constitutional processes.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8328,12 +8373,12 @@
         "confidence": null
       },
       "responsiveness": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "stewardship": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "medium"
       },
       "institutional_integrity": {
         "score": null,
@@ -8344,8 +8389,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Prime Minister publicly reports on agricultural infrastructure project progress, demonstrating investment in long-term economic capacity and responsiveness to agricultural sector needs.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8369,8 +8419,8 @@
     "link": "https://www.radiotamazuj.org/en/news/article/puot-kang-links-kiir-allies-to-nasir-garrison-bloodshed",
     "dimensions": {
       "accountability": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "responsiveness": {
         "score": null,
@@ -8389,8 +8439,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Official publicly links high-level allies to violence incident, indicating accountability enforcement action.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8414,8 +8469,8 @@
     "link": "https://www.sudanspost.com/prominent-kiir-allies-accused-of-plotting-nasir-attacks/?utm_source=rss&utm_medium=rss&utm_campaign=prominent-kiir-allies-accused-of-plotting-nasir-attacks",
     "dimensions": {
       "accountability": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "responsiveness": {
         "score": null,
@@ -8434,8 +8489,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "President takes action against allies accused of security violations, demonstrating enforcement against high-level misconduct.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8463,12 +8523,12 @@
         "confidence": null
       },
       "responsiveness": {
-        "score": null,
-        "confidence": null
+        "score": 0.7,
+        "confidence": "medium"
       },
       "stewardship": {
-        "score": null,
-        "confidence": null
+        "score": 0.8,
+        "confidence": "high"
       },
       "institutional_integrity": {
         "score": null,
@@ -8479,8 +8539,13 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Launch of Advanced Air Traffic system demonstrates clear investment in long-term aviation infrastructure and public capability.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   },
   {
     "is_leadership_event": true,
@@ -8524,7 +8589,362 @@
         "confidence": null
       }
     },
-    "rationale": null,
-    "needs_scoring": true
+    "rationale": "Public praise statement provides no observable evidence for any of the five behavioral dimensions.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "69fefa560dc37725",
+    "date": "2026-05-25",
+    "week": "2026-W21",
+    "month": "2026-05",
+    "country": "Morocco",
+    "president": "Mohammed VI",
+    "actor": "mohammed vi",
+    "actor_type": "presidential",
+    "action_type": "judicial_ruling",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T0",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "Statement by the Royal Office",
+    "link": "https://www.maroc.ma/en/news/statement-royal-office-4",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": "Insufficient evidence provided to assess any behavioral dimensions from this event description",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "17dcbc15b3a24ca3",
+    "date": "2026-05-24",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Benin",
+    "president": "Talon",
+    "actor": "talon",
+    "actor_type": "presidential",
+    "action_type": "appointment",
+    "domain": "economy",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "Former finance minister Romuald Wadagni sworn is as Benin's new president",
+    "link": "http://www.africanews.com/2026/05/24/former-finance-minister-romuald-wadagni-sworn-is-as-benins-new-president/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": 0.8,
+        "confidence": "high"
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": "Presidential swearing-in ceremony demonstrates formal institutional transfer of executive authority through constitutional processes.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "71d95a041d93784b",
+    "date": "2026-05-25",
+    "week": "2026-W21",
+    "month": "2026-05",
+    "country": "Nigeria",
+    "president": "Tinubu",
+    "actor": "tinubu",
+    "actor_type": "presidential",
+    "action_type": "judicial_ruling",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 8,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 5,
+    "context": "governance",
+    "evidence": "UN Alarm: Tinubu Has Turned Nigeria into Hunger Hotspot, Says Atiku",
+    "link": "https://dailytrust.com/un-alarm-tinubu-has-turned-nigeria-into-hunger-hotspot-says-atiku/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": 0.2,
+        "confidence": "medium"
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": "Opposition leader's criticism of president regarding widespread hunger indicates poor responsiveness to basic public welfare needs.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "c5bdf114c69a479c",
+    "date": "2026-05-23",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Senegal",
+    "president": "Faye",
+    "actor": "faye",
+    "actor_type": "presidential",
+    "action_type": "dismissal",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Dakar residents react to sacking of Senegal's PM Sonko",
+    "link": "http://www.africanews.com/2026/05/23/dakar-residents-react-to-sacking-of-senegals-pm-sonko/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": 0.5,
+        "confidence": "medium"
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": "Presidential dismissal of PM indicates use of formal executive authority but insufficient context to determine if institutional procedures were followed or bypassed.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "c457c50ee1ced87a",
+    "date": "2026-05-23",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Senegal",
+    "president": "Faye",
+    "actor": "faye",
+    "actor_type": "presidential",
+    "action_type": "dismissal",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T2",
+    "source_bias": "independent",
+    "feed_count": 2,
+    "context": "governance",
+    "evidence": "Senegal's President Faye sacks PM Sonko after months of tensions",
+    "link": "http://www.africanews.com/2026/05/23/senegals-president-faye-sacks-pm-sonko-after-months-of-tensions/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": 0.7,
+        "confidence": "medium"
+      },
+      "inclusion": {
+        "score": null,
+        "confidence": null
+      }
+    },
+    "rationale": "President exercises formal constitutional authority to dismiss Prime Minister through established executive procedures.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "7594867f9e34ab71",
+    "date": "2026-05-25",
+    "week": "2026-W21",
+    "month": "2026-05",
+    "country": "Zambia",
+    "president": "Hichilema",
+    "actor": "hichilema",
+    "actor_type": "presidential",
+    "action_type": "public_statement",
+    "domain": "elections",
+    "framing": "neutral",
+    "filter_score": 6,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "JACK MWIIMBU URGES MONZE INDEPENDENT CANDIDATE TO WITHDRAW",
+    "link": "https://zambianobserver.com/jack-mwiimbu-urges-monze-independent-candidate-to-withdraw/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": 0.2,
+        "confidence": "medium"
+      }
+    },
+    "rationale": "Urging a candidate to withdraw from electoral competition signals discouragement of diverse political participation.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
+  },
+  {
+    "is_leadership_event": true,
+    "event_id": "cabed85e31c83a38",
+    "date": "2026-05-24",
+    "week": "2026-W20",
+    "month": "2026-05",
+    "country": "Zambia",
+    "president": "Hichilema",
+    "actor": "hichilema",
+    "actor_type": "presidential",
+    "action_type": "appointment",
+    "domain": "general",
+    "framing": "neutral",
+    "filter_score": 7,
+    "source_tier": "T1",
+    "source_bias": "independent",
+    "feed_count": 3,
+    "context": "governance",
+    "evidence": "You can\u2019t handover to a group of failures, Nalumango tells supporters",
+    "link": "https://zambianobserver.com/you-cant-handover-to-a-group-of-failures-nalumango-tells-supporters/",
+    "dimensions": {
+      "accountability": {
+        "score": null,
+        "confidence": null
+      },
+      "responsiveness": {
+        "score": null,
+        "confidence": null
+      },
+      "stewardship": {
+        "score": null,
+        "confidence": null
+      },
+      "institutional_integrity": {
+        "score": null,
+        "confidence": null
+      },
+      "inclusion": {
+        "score": 0.2,
+        "confidence": "medium"
+      }
+    },
+    "rationale": "Vice President Nalumango's public characterization of opponents as 'failures' shows divisive rather than accommodating rhetoric toward diverse political actors.",
+    "needs_scoring": false,
+    "needs_llm_review": false,
+    "model_version": "claude-sonnet-4-20250514",
+    "scoring_date": "2026-05-26",
+    "scoring_run_id": "e6aa4960",
+    "prompt_version": "6106c3ea"
   }
 ]
