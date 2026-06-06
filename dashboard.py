@@ -742,84 +742,317 @@ with tab2:
 # TAB 3 — METHODOLOGY
 # =========================================================
 with tab3:
-    st.subheader("What POLIS Measures")
+
+    st.markdown("### What POLIS Measures")
     st.markdown(
-        "POLIS tracks observable presidential leadership behaviour across all 54 African countries "
-        "using five behavioural dimensions derived from three theoretical frameworks. "
-        "It does not measure leadership quality — it records observable governance signals."
+        "POLIS is a computational instrument for tracking observable presidential leadership "
+        "behaviour across all 54 African countries. It records governance signals derived from "
+        "news media. It does not measure leadership quality, intention, or outcomes. "
+        "News-based event data was selected as the primary source because it provides systematic, "
+        "reproducible, real-time coverage of observable presidential behaviour at continental scale, "
+        "consistent with established practice in computational political science."
     )
 
     st.divider()
-    st.subheader("The Five Dimensions")
-    for dim in DIMENSIONS:
-        with st.expander(DIMENSION_LABELS[dim] + " — " + DIMENSION_ROOTS[dim]):
-            st.markdown(DIMENSION_DESCRIPTIONS[dim])
-            st.caption("Theoretical root: " + DIMENSION_ROOTS[dim])
+    st.markdown("### The Five Dimensions")
+    st.markdown(
+        "Each dimension is grounded in the theoretical literature and operationalised as a set "
+        "of observable governance signals detectable from news-based event data. The dimensions "
+        "are not exhaustive of presidential leadership behaviour. They represent the subset of "
+        "theoretically significant behaviours that are systematically observable through public "
+        "reporting. Together they constitute a behavioural signal profile rather than a "
+        "comprehensive leadership assessment."
+    )
+
+    with st.expander("Accountability"):
+        st.markdown(
+            "Accountability measures the degree to which observable presidential behaviour reflects "
+            "submission to or enforcement of institutional oversight mechanisms. In principal-agent "
+            "theory, accountability is the primary instrument by which principals constrain agent "
+            "behaviour and correct for agency dilemmas (Lane, 2005). In the African governance context, "
+            "accountability signals are particularly significant because formal oversight institutions - "
+            "anti-corruption agencies, independent judiciaries, parliamentary committees - frequently "
+            "operate under political pressure and their activation represents a meaningful governance "
+            "signal in itself.\n\n"
+            "Observable signals include: anti-corruption enforcement actions; prosecutions of public "
+            "officials; responses to audit findings; activation of judicial accountability processes; "
+            "and public acknowledgement of institutional findings. Low accountability scores indicate "
+            "an absence of observable oversight activity - either because oversight institutions are "
+            "inactive, because enforcement is selective rather than systemic, or because such actions "
+            "are not publicly reported. The direction of accountability matters: a president who "
+            "prosecutes political opponents while shielding allies produces a different governance "
+            "pattern from one who applies enforcement consistently, and POLIS scores reflect this "
+            "asymmetry where evidence is present.\n\n"
+            "Theoretical root: Principal-agent theory (Jensen and Meckling, 1976; Lane, 2005)"
+        )
+
+    with st.expander("Responsiveness"):
+        st.markdown(
+            "Responsiveness measures the degree to which observable presidential actions follow stated "
+            "priorities or demonstrated public needs. It operationalises the core principal-agent "
+            "obligation of the agent to serve the principal's interests - in this context, the "
+            "obligation of the president to govern in ways that address citizen welfare and deliver on "
+            "public commitments. Hartley and Benington (2010) extend this beyond mere compliance with "
+            "citizen preferences to encompass active orientation toward public value creation, "
+            "distinguishing between presidents who respond to immediate political pressures and those "
+            "who pursue longer-term citizen welfare objectives.\n\n"
+            "Observable signals include: policy implementation actions following public announcements; "
+            "welfare and social service delivery decisions; crisis response actions; citizen-directed "
+            "resource allocation; and legislative or executive actions that address identified public "
+            "needs. The responsiveness dimension is particularly sensitive to the visibility-action "
+            "tension identified in the neopatrimonialism literature - high volumes of public statements "
+            "about citizen welfare that are unaccompanied by corresponding implementation signals "
+            "produce lower responsiveness scores than quieter governance accompanied by tangible "
+            "delivery actions.\n\n"
+            "Theoretical root: Principal-agent theory and Public leadership literature (Hartley and Benington, 2010)"
+        )
+
+    with st.expander("Stewardship"):
+        st.markdown(
+            "Stewardship measures the degree to which observable presidential behaviour reflects "
+            "investment in long-term public institutional capability. The concept draws on Hartley "
+            "and Benington's (2010) public value framework and on the broader public administration "
+            "literature's emphasis on the custodial obligations of public leaders - the responsibility "
+            "to maintain and strengthen the institutional infrastructure of the state for future "
+            "generations, not merely to respond to current political demands. In the African context, "
+            "where state institutional capacity is frequently fragile and the temptation to personalise "
+            "or weaken independent institutions for short-term political gain is structurally strong, "
+            "stewardship signals carry particular diagnostic weight.\n\n"
+            "Observable signals include: institutional reform initiatives; investment in judicial, "
+            "legislative, or civil service capacity; infrastructure development with long-term public "
+            "benefit; public service appointments oriented toward capability rather than loyalty; and "
+            "legislative actions that strengthen rather than circumvent institutional frameworks. "
+            "Stewardship is analytically distinct from institutional integrity: a president may invest "
+            "in institutions while simultaneously using informal channels to control them, producing "
+            "high stewardship and low institutional integrity scores simultaneously. This combination "
+            "is a meaningful governance pattern in the neopatrimonialism literature, associated with "
+            "what Bratton and van de Walle (1997) term institutional capture.\n\n"
+            "Theoretical root: Public leadership literature (Hartley and Benington, 2010; 't Hart and Uhr, 2008)"
+        )
+
+    with st.expander("Institutional Integrity"):
+        st.markdown(
+            "Institutional integrity measures the degree to which presidential authority is exercised "
+            "through formal constitutional channels rather than through personalised, informal, or "
+            "bypass mechanisms. It is the dimension most directly derived from the neopatrimonialism "
+            "framework, operationalising Bratton and van de Walle's (1997) central analytical concern "
+            "with the gap between the formal-legal register of African governance and its "
+            "informal-patrimonial reality. A president who consistently routes decisions through "
+            "parliament, respects judicial independence, and operates within procedural constraints "
+            "signals a governance orientation toward formal institutionalism; a president who routinely "
+            "issues executive decrees that bypass legislative processes, dismisses independent "
+            "institutional actors, or uses security services for domestic political purposes signals "
+            "the opposite.\n\n"
+            "Observable signals include: parliamentary routing of major policy decisions; respect for "
+            "judicial rulings including those that constrain executive power; procedural compliance in "
+            "appointments and dismissals; absence of executive override of independent institutional "
+            "processes; and engagement with constitutional constraints rather than circumvention of "
+            "them. Low institutional integrity scores do not necessarily indicate authoritarianism - "
+            "they may reflect governance contexts where formal institutions are genuinely weak and "
+            "informal mechanisms are the only functional channels available.\n\n"
+            "Theoretical root: Neopatrimonialism (Bratton and van de Walle, 1997; Chabal and Daloz, 1999)"
+        )
+
+    with st.expander("Inclusion"):
+        st.markdown(
+            "Inclusion measures the degree to which observable presidential behaviour reflects "
+            "accommodation of diverse actors, voices, and interests in governance processes. It draws "
+            "on the principal-agent framework's concern with the scope of the principal - whose "
+            "interests the agent is actually serving - and extends it through the public leadership "
+            "literature's emphasis on participatory and relational governance (Hartley and Benington, "
+            "2010). In the African context, inclusion carries additional theoretical weight through "
+            "the ubuntu tradition of relational governance, which frames leadership not as individual "
+            "authority but as collective responsibility embedded in community relationships (Bolden "
+            "and Kirk, 2009). However, given the observability constraints of news-based data "
+            "collection, POLIS measures the procedural and institutional dimensions of inclusion "
+            "rather than its relational quality.\n\n"
+            "Observable signals include: public consultations and national dialogues; cross-party "
+            "engagement and opposition dialogue; community-level forums and civic engagement; "
+            "coalition-building behaviour; appointments that reflect diversity across regional, "
+            "ethnic, or political lines; and policy processes that incorporate civil society input. "
+            "Inclusion is consistently the weakest dimension in the current dataset, a pattern that "
+            "warrants careful interpretation: it may reflect genuine exclusionary governance, the "
+            "structural under-reporting of community-level engagement in national news media, or both.\n\n"
+            "Theoretical root: Principal-agent theory, Public leadership literature, and Ubuntu/relational governance (Bolden and Kirk, 2009)"
+        )
 
     st.divider()
-    st.subheader("Theoretical Framework")
-
-    st.markdown("**Primary — Principal-Agent Theory**")
+    st.markdown("### Theoretical Framework")
     st.markdown(
-        "The president is understood as an agent acting on behalf of citizens (the principal). "
-        "The dimensions measure whether the agent is accountable, responsive, and acting in "
-        "the principal's interests rather than their own. This framework produces the "
-        "accountability, responsiveness, and inclusion dimensions directly."
+        "POLIS is grounded in three complementary theoretical traditions, each selected for its "
+        "explanatory purchase on different dimensions of African presidential leadership behaviour. "
+        "Together they provide a multi-layered analytical architecture that moves beyond "
+        "single-framework approaches to governance measurement."
     )
 
-    st.markdown("**Supporting — Public Leadership Literature**")
+    st.markdown("**Primary - Principal-Agent Theory**")
     st.markdown(
-        "Public leadership theory (Hartley, Benington) frames leaders as stewards of public "
-        "institutions and long-term public value. This produces the stewardship dimension — "
-        "investment in capability that outlasts individual administrations."
+        "Principal-agent theory provides the foundational logic of the POLIS measurement "
+        "architecture. The framework, originally developed in the context of organisational "
+        "economics (Jensen and Meckling, 1976), models the relationship between a principal - "
+        "the party who delegates authority - and an agent - the party entrusted to act on the "
+        "principal's behalf. In the public governance context, citizens are the collective principal "
+        "and the president is the agent entrusted with executive authority (Lane, 2005; Strom, 2000). "
+        "The central analytical problem is the agency dilemma: agents may pursue their own interests "
+        "rather than those of the principal, particularly where accountability mechanisms are weak, "
+        "information is asymmetric, or institutional constraints are insufficient to discipline "
+        "behaviour.\n\n"
+        "In the African context, this dilemma is acute. The structural conditions for effective "
+        "principal-agent accountability - competitive elections, independent judiciaries, free media, "
+        "active civil society - are present in varying and often compromised forms across the "
+        "continent. POLIS does not assume their presence; rather, it uses observable signals to "
+        "measure the degree to which presidential behaviour reflects agent accountability to citizens. "
+        "The dimensions of accountability, responsiveness, and inclusion are direct "
+        "operationalisations of principal-agent theory: accountability measures whether the agent "
+        "submits to oversight; responsiveness measures whether the agent acts in the principal's "
+        "interests; inclusion measures whether the agent governs on behalf of the full principal "
+        "population rather than a narrow coalition."
     )
 
-    st.markdown("**Contextual — Neopatrimonialism (Bratton & van de Walle)**")
+    st.markdown("**Supporting - Public Leadership Literature**")
     st.markdown(
-        "African governance often operates in the gap between formal institutions and informal "
-        "personal authority. Neopatrimonialism explains why a president may simultaneously "
-        "maintain formal institutional structures while exercising power through personal networks. "
-        "This produces the institutional integrity dimension."
+        "Public leadership theory extends the principal-agent framework by foregrounding the "
+        "distinctive character of leadership in public institutional contexts (Hartley and Benington, "
+        "2010; 't Hart and Uhr, 2008). Where principal-agent theory emphasises the control and "
+        "accountability relationship between citizen and leader, public leadership theory emphasises "
+        "the stewardship relationship - the obligation of leaders to maintain, strengthen, and pass "
+        "on the public institutions and capabilities they inherit. Hartley and Benington (2010) argue "
+        "that public value creation - the generation of outcomes that serve the long-term public "
+        "interest - is the defining purpose of public leadership and cannot be reduced to simple "
+        "responsiveness to current citizen preferences.\n\n"
+        "This tradition produces the stewardship dimension in POLIS - the observable commitment of a "
+        "president to investing in institutional capability that outlasts their administration. It also "
+        "deepens the responsiveness dimension beyond simple policy compliance, framing it as an active "
+        "orientation toward citizen welfare rather than merely reactive behaviour. In the African "
+        "context, where institutional fragility is a persistent governance challenge, stewardship "
+        "signals carry particular analytical weight as indicators of a developmental rather than "
+        "extractive leadership orientation."
+    )
+
+    st.markdown("**Contextual - Neopatrimonialism**")
+    st.markdown(
+        "Neopatrimonialism, as developed principally by Bratton and van de Walle (1997) and extended "
+        "by Chabal and Daloz (1999), provides the essential contextual framework for interpreting "
+        "African presidential governance. The concept captures the empirical reality that most African "
+        "states operate simultaneously across two registers: the formal-legal register of "
+        "constitutional governance, with its official institutions, procedures, and accountability "
+        "mechanisms; and the informal-patrimonial register of personal rule, clientelism, and "
+        "network-based authority. Presidents occupy both registers simultaneously, using the formal "
+        "apparatus of the state to satisfy donor requirements and constitutional obligations while "
+        "exercising real power through informal networks of personal loyalty, ethnic solidarity, and "
+        "resource distribution.\n\n"
+        "This dual-register character of African governance has profound implications for measurement. "
+        "Formal governance indicators - legislative output, judicial appointments, budget allocations "
+        "- may present a misleading picture of institutional health if they are disconnected from the "
+        "informal power dynamics that actually determine governance outcomes. POLIS addresses this "
+        "directly through the institutional integrity dimension, which measures not simply whether "
+        "formal institutions are used, but whether they are used as the primary mechanism of "
+        "governance or as a facade behind which informal authority operates."
     )
 
     st.divider()
-    st.subheader("Analytic Tensions")
+    st.markdown("### Analytic Tensions")
     st.markdown(
-        "Three structural tensions underpin the classification logic:\n\n"
-        "**Formal institutions vs informal power** — does authority flow through constitutional "
-        "channels or personal networks?\n\n"
-        "**Centralisation vs accommodation** — is the president concentrating or distributing power?\n\n"
-        "**Visibility vs action** — do public statements correspond to observable governance actions?"
+        "Three structural tensions derived from the African governance literature underpin the "
+        "classification logic (Bratton and van de Walle, 1997; Herbst, 2000; Chabal and Daloz, 1999)."
+    )
+
+    st.markdown("**Formal institutions versus informal power**")
+    st.markdown(
+        "African presidents routinely operate across two registers simultaneously - the formal "
+        "constitutional apparatus of the state and informal networks of personal loyalty, patronage, "
+        "and ethnic solidarity. Bratton and van de Walle (1997) identify this duality as the defining "
+        "feature of neopatrimonial governance. POLIS tracks which register dominates observable "
+        "behaviour in a given period, using institutional integrity signals as the primary indicator."
+    )
+
+    st.markdown("**Centralisation versus accommodation**")
+    st.markdown(
+        "The distribution or concentration of power is a fundamental axis of African presidential "
+        "governance (Herbst, 2000). Presidents who centralise - through executive decrees, dismissals "
+        "of independent institutional actors, or security deployments against political competitors "
+        "- produce measurably different signal patterns from those who accommodate competing centres "
+        "of power through appointments, dialogue, and coalition building. This tension drives the "
+        "accountability and inclusion dimensions."
+    )
+
+    st.markdown("**Visibility versus action**")
+    st.markdown(
+        "Chabal and Daloz (1999) observe that African political leadership is frequently performative "
+        "- sophisticated governance rhetoric directed at international audiences while domestic "
+        "behaviour follows different logics. POLIS is specifically designed to detect this divergence "
+        "by measuring whether public statement events are followed by corresponding policy or "
+        "enforcement actions, or whether high communication density coexists with low delivery signals."
     )
 
     st.divider()
-    st.subheader("Scoring")
+    st.markdown("### Scoring")
     st.markdown(
-        "Scores are 0.0 to 1.0. Each event is scored independently by the LLM reviewer "
-        "against the five dimensions using the evidence text, action type, and domain. "
-        "Country profiles aggregate individual event scores.\n\n"
-        "**Null (—)** means no observable signal for that dimension in that event — "
-        "not an absence of behaviour.\n\n"
-        "**0.0** means clear evidence of absence or violation of the dimension.\n\n"
-        "**Confidence levels** — high, medium, low — reflect signal clarity per event.\n\n"
+        "Each event is scored independently by an LLM classifier against the five dimensions using "
+        "the evidence text, action type, and governance domain. Scores range from 0.0 to 1.0. "
+        "Country-level dimension profiles aggregate individual event scores across the observation window.\n\n"
+        "**Null** indicates no observable signal for that dimension. It is not evidence of absence of behaviour.\n\n"
+        "**0.0** indicates clear evidence of absence or active violation of the dimension.\n\n"
+        "**1.0** indicates a strong, unambiguous positive signal for that dimension.\n\n"
         "Countries with fewer than 30 events should be interpreted with caution. "
-        "Countries with fewer than 10 events are insufficient for any pattern claims."
+        "Countries with fewer than 10 events are insufficient for pattern-level claims."
     )
 
     st.divider()
-    st.subheader("Observability Limits")
+    st.markdown("### Dimension Development")
+    st.markdown(
+        "The five dimensions were derived through a review of the principal-agent, public leadership, "
+        "and neopatrimonialism literatures for relevant indicators demonstrating leadership qualities "
+        "that are observable through news-based event data. Formal validation against human-coded "
+        "ground truth has not yet been conducted and is identified as a priority for future "
+        "development of the instrument."
+    )
+
+    st.divider()
+    st.markdown("### Observability Limits")
     st.info(
-        "POLIS observes what is reported in news feeds — not what happens behind closed doors. "
-        "Absence of signal is not evidence of absence of behaviour. "
-        "Presidents who govern quietly will score lower than those who govern visibly. "
-        "State-controlled sources are flagged and down-weighted. "
-        "Coverage varies significantly by country depending on feed availability."
+        "POLIS observes what is reported in news feeds, not what happens in closed governance spaces. "
+        "Absence of signal is not evidence of absence of behaviour. Presidents who govern quietly "
+        "will produce fewer signals than those who govern publicly. State-controlled sources are "
+        "flagged and down-weighted in the scoring pipeline. Coverage varies significantly by country "
+        "depending on feed availability, and cross-country comparisons should account for this "
+        "structural asymmetry. The dimensions were designed around what is observable through public "
+        "reporting - a methodological choice grounded in what presidential leadership looks like "
+        "from the outside, which is what citizens, journalists, and policy actors experience. The pipeline has a structural positive bias: it captures observable governance actions more reliably than inaction, failure to deliver, or governance harm. Scores should be read as a floor, not a ceiling."
     )
 
     st.divider()
-    st.subheader("Citation")
+    st.markdown("### Data Collection")
+    st.markdown(
+        "Events are ingested daily from RSS feeds across presidential websites, independent domestic "
+        "media, regional outlets, and international sources across all 54 African countries. Sources "
+        "are classified by tier (T0 official; T1 independent domestic; T2 regional; T3 international) "
+        "and bias (state-controlled or independent). Systematic daily collection commenced May 2026. "
+        "The dataset contains events dating from June 2024 to present, reflecting the retrospective "
+        "coverage of some feed sources."
+    )
+
+    st.divider()
+    st.markdown("### References")
+    st.markdown(
+        "Bolden, R. and Kirk, P. (2009). African leadership: Surfacing new understandings through "
+        "leadership development. *International Journal of Cross Cultural Management, 9*(1), 69-86.\n\n"
+        "Bratton, M. and van de Walle, N. (1997). *Democratic Experiments in Africa.* Cambridge University Press.\n\n"
+        "Chabal, P. and Daloz, J-P. (1999). *Africa Works: Disorder as Political Instrument.* James Currey.\n\n"
+        "Hartley, J. and Benington, J. (2010). *Public Value: Theory and Practice.* Open University Press.\n\n"
+        "Herbst, J. (2000). *States and Power in Africa.* Princeton University Press.\n\n"
+        "Jensen, M. and Meckling, W. (1976). Theory of the firm: Managerial behaviour, agency costs "
+        "and ownership structure. *Journal of Financial Economics, 3*(4), 305-360.\n\n"
+        "Lane, J-E. (2005). *Public Administration and Public Management.* Routledge.\n\n"
+        "Strom, K. (2000). Delegation and accountability in parliamentary democracies. "
+        "*European Journal of Political Research, 37*(3), 261-289.\n\n"
+        "'t Hart, P. and Uhr, J. (2008). *Public Leadership Perspectives and Practices.* ANU Press."
+    )
+
+    st.divider()
+    st.markdown("### Citation")
     st.code(
-        "POLIS — Public Leadership Observation & Insight System. "
+        "POLIS - Public Leadership Observation and Insight System. "
         "Change-alongside, 2026. https://polis-dashboard.streamlit.app",
         language=None
     )
@@ -828,8 +1061,3 @@ with tab3:
         "Model: claude-sonnet-4-20250514 · "
         "Principal-agent theory + Public leadership + Neopatrimonialism"
     )
-
-st.caption(
-    "POLIS v8.0 · 5 Behavioural Dimensions · 54 Countries · "
-    "Observable signals only — not a measure of leadership quality"
-)
