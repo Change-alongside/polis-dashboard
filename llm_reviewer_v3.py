@@ -4,6 +4,7 @@ Scores events against five behavioural dimensions.
 Replaces theory classification entirely.
 Run: python3 llm_reviewer_v3.py
 """
+import hashlib
 import json
 import os
 import sys
@@ -187,7 +188,6 @@ def run_scoring():
 
     # FIX 1: Assign stable event_id to any event that lacks one
     # sha256(evidence + country) — deterministic, collision-resistant for this scale
-    import hashlib
     changed_ids = 0
     for e in data:
         if e.get("is_leadership_event") and "event_id" not in e:
@@ -197,17 +197,27 @@ def run_scoring():
     if changed_ids:
         print("Assigned event_id to {} events".format(changed_ids))
 
+
+    DIMS = ["accountability","responsiveness","stewardship",
+            "institutional_integrity","inclusion"]
+
+    def has_real_score(e):
+        return any(
+            e.get("dimensions",{}).get(d,{}).get("score") is not None
+            for d in DIMS
+        )
+
     # Score all leadership events that lack dimension vectors
     to_score = [
         e for e in data
         if e.get("is_leadership_event")
-        and "dimensions" not in e
+        and not has_real_score(e)
     ]
 
     # Also re-score events still carrying old theory labels as primary output
     already_scored = len([e for e in data
                           if e.get("is_leadership_event")
-                          and "dimensions" in e])
+                          and has_real_score(e)])
 
     print("=" * 55)
     print("POLIS DIMENSION SCORER v3.0")
