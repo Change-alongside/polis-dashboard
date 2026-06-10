@@ -235,7 +235,7 @@
       "secondary_theory": "none",
       "domain": "general",
       "leadership_mode": "proactive",
-      "rationale": "Schedule change announcement provides no observable evidence for any behavioral dimension",
+      "rationale": "Schedule change announcement provides insufficient detail to assess any behavioral dimensions.",
       "needs_llm_review": false,
       "framing": "neutral",
       "week": "2026-W17",
@@ -267,8 +267,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -283,7 +283,7 @@
       "secondary_theory": "none",
       "domain": "security",
       "leadership_mode": "proactive",
-      "rationale": "Event describes Moroccan king's actions, not Algerian presidential behavior",
+      "rationale": "Event describes Moroccan king's action, not Algerian presidential behavior",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T2",
@@ -320,8 +320,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -442,7 +442,7 @@
       "secondary_theory": "none",
       "domain": "general",
       "leadership_mode": "proactive",
-      "rationale": "The text only indicates a royal court communique without specifying the nature or content of any appointment or action.",
+      "rationale": "Royal communique announcing appointment provides no observable behavioral signals for any measured dimensions",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T0",
@@ -479,8 +479,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -650,7 +650,7 @@
       "secondary_theory": "none",
       "domain": "governance",
       "leadership_mode": "neutral",
-      "rationale": "Only event title provided without speech content or specific actions described.",
+      "rationale": "Event description provides only title and venue information without specific content or actions to evaluate.",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T0",
@@ -687,8 +687,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -1604,7 +1604,7 @@
       "secondary_theory": "none",
       "domain": "general",
       "leadership_mode": "reactive",
-      "rationale": "External diplomatic criticism provides no direct observable evidence of presidential behavioral signals across measured dimensions.",
+      "rationale": "External diplomatic criticism provides no observable evidence of presidential behavioral signals across any dimension.",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T1",
@@ -1641,8 +1641,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -2137,7 +2137,7 @@
       "domain": "governance",
       "leadership_mode": "neutral",
       "framing": "diplomacy",
-      "rationale": "Presidency's dismissive characterization of diplomatic meeting provides no observable behavioral signals for any measured dimensions.",
+      "rationale": "Presidential statement provides minimal information about meeting purpose, offering no observable behavioral signals across measured dimensions.",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T1",
@@ -2171,8 +2171,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -2402,7 +2402,7 @@
       "domain": "general",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Event describes Chinese UN action with no observable Gambian presidential behavior",
+      "rationale": "No observable evidence of Gambian presidential behavior in this event about Chinese UN activity",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T1",
@@ -2436,8 +2436,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -2773,7 +2773,7 @@
       "domain": "general",
       "leadership_mode": "proactive",
       "framing": "community",
-      "rationale": "General public statement about patriots and prosperity provides no observable evidence for any of the five behavioral dimensions",
+      "rationale": "General statement about patriots and prosperity provides no observable evidence for any of the five behavioral dimensions.",
       "needs_llm_review": false,
       "confidence_score": 4,
       "source_tier": "T2",
@@ -2807,8 +2807,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -3038,7 +3038,7 @@
       "domain": "security",
       "leadership_mode": "proactive",
       "framing": "reform",
-      "rationale": "Event describes South Sudan's President Kiir, not Zambia's president as specified in country field",
+      "rationale": "Event concerns South Sudan's president, not Zambia as specified in country field",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T1",
@@ -3072,8 +3072,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -3144,7 +3144,7 @@
       "domain": "governance",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Evidence describes public demands regarding an incident in Namibia, not observable Zambian presidential behavior",
+      "rationale": "Event describes public demands regarding a Namibian case, providing no observable evidence of Zambian presidential behavior",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T1",
@@ -3178,8 +3178,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -3496,8 +3496,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -3515,7 +3515,7 @@
       "domain": "security",
       "leadership_mode": "proactive",
       "framing": "legitimacy",
-      "rationale": "Event only shows opposition party making a request to the president with no observable presidential action or response.",
+      "rationale": "Event describes opposition party making a request to the president but provides no observable presidential behavior to score.",
       "needs_llm_review": false,
       "confidence_score": 4,
       "source_tier": "T2",
@@ -3549,8 +3549,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -3674,7 +3674,7 @@
       "domain": "justice",
       "leadership_mode": "reactive",
       "framing": "accountability",
-      "rationale": "EFF statement demanding impeachment provides no observable evidence of presidential behavioral signals as this is opposition party action, not presidential action",
+      "rationale": "Event describes opposition party demands rather than presidential behavioral signals",
       "needs_llm_review": false,
       "confidence_score": 5,
       "source_tier": "T1",
@@ -3708,8 +3708,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -4257,7 +4257,7 @@
       "domain": "governance",
       "leadership_mode": "proactive",
       "framing": "crisis",
-      "rationale": "Event describes opposition coalition actions against government, not presidential behavioral signals.",
+      "rationale": "This event describes opposition group actions, not presidential behavioral signals",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T1",
@@ -4291,8 +4291,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -4787,7 +4787,7 @@
       "domain": "security",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Evidence provides only a question about potential changes with no observable behavioral signals or concrete actions to measure.",
+      "rationale": "Evidence consists only of a question with no observable behavioral signals or specific actions described.",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T1",
@@ -4821,8 +4821,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -5476,7 +5476,7 @@
       "domain": "justice",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "This is a statement by Antonio Mwanza advocating against presidential action, not an observable presidential behavior.",
+      "rationale": "Event describes third-party statement about the president rather than observable presidential behavior.",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T1",
@@ -5510,8 +5510,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -5953,7 +5953,7 @@
       "domain": "economy",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Event text only contains opposition criticism without describing specific observable presidential actions or behaviors.",
+      "rationale": "Opposition party ADC publicly criticizes government's fiscal management as unsustainable 'Ponzi economy' due to excessive borrowing practices.",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T1",
@@ -5965,16 +5965,16 @@
       "event_id": "2a49239ee4fa1a8f",
       "dimensions": {
         "accountability": {
-          "score": null,
-          "confidence": null
+          "score": 0.0,
+          "confidence": "high"
         },
         "responsiveness": {
           "score": null,
           "confidence": null
         },
         "stewardship": {
-          "score": null,
-          "confidence": null
+          "score": 0.2,
+          "confidence": "medium"
         },
         "institutional_integrity": {
           "score": null,
@@ -5987,8 +5987,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -6165,7 +6165,7 @@
       "domain": "general",
       "leadership_mode": "neutral",
       "framing": "accountability",
-      "rationale": "Statement of defiance against sanctions provides no observable evidence for any of the five behavioral dimensions.",
+      "rationale": "Statement expresses defiant position on sanctions but provides no observable evidence of specific institutional or policy behaviors across the measured dimensions.",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T1",
@@ -6199,8 +6199,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -6218,7 +6218,7 @@
       "domain": "general",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Event title provides no observable behavioral signals for dimensional analysis",
+      "rationale": "Event text contains only a headline without specific observable behavioral signals to score.",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T2",
@@ -6252,8 +6252,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -6483,7 +6483,7 @@
       "domain": "elections",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Vote target announcement provides no observable evidence for any of the five behavioral dimensions",
+      "rationale": "Political party setting electoral target provides no observable evidence for any of the five behavioral dimensions measured.",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T1",
@@ -6517,8 +6517,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -6589,7 +6589,7 @@
       "domain": "general",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Event describes a ceremonial lunch for armed forces anniversary with no observable governance signals across measured dimensions",
+      "rationale": "Event describes ceremonial lunch hosted by the King for armed forces anniversary with no observable policy or governance signals",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T0",
@@ -6623,8 +6623,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -6695,7 +6695,7 @@
       "domain": "general",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Event shows only a CEO making public statements rebutting claims, with no observable presidential behavioral signals present.",
+      "rationale": "Event shows only a CEO making claims about free speech protection without observable presidential action or institutional behavior.",
       "needs_llm_review": false,
       "confidence_score": 8,
       "source_tier": "T1",
@@ -6729,8 +6729,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -7071,7 +7071,7 @@
       "domain": "justice",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Headline only announces appointment without details on process, qualifications, or institutional procedures followed",
+      "rationale": "Headline only mentions appointment occurred but provides no observable details about the appointment process or circumstances",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T2",
@@ -7105,8 +7105,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -7336,7 +7336,7 @@
       "domain": "governance",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Event describes external advocacy to the president but no observable presidential behavioral signal or action is present.",
+      "rationale": "Event describes external advocacy to the president but no observable presidential behavior or action",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T1",
@@ -7370,8 +7370,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -7813,7 +7813,7 @@
       "domain": "general",
       "leadership_mode": "neutral",
       "framing": "neutral",
-      "rationale": "Event describes candidate withdrawal with no observable presidential behavioral signals",
+      "rationale": "Individual candidate withdrawal from mayoral race contains no observable presidential behavioral signals",
       "needs_llm_review": false,
       "confidence_score": 6,
       "source_tier": "T1",
@@ -7847,8 +7847,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -7866,7 +7866,7 @@
       "domain": "governance",
       "leadership_mode": "proactive",
       "framing": "neutral",
-      "rationale": "Individual candidate withdrawal from parliamentary race provides no observable evidence of presidential behavioral signals across any measured dimensions.",
+      "rationale": "Individual candidate withdrawal from parliamentary race provides no observable presidential leadership signals",
       "needs_llm_review": false,
       "confidence_score": 7,
       "source_tier": "T1",
@@ -7900,8 +7900,8 @@
       },
       "needs_scoring": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8049,12 +8049,12 @@
           "confidence": null
         }
       },
-      "rationale": "Insufficient evidence provided - only mentions existence of Royal Office statement without content or context.",
+      "rationale": "Insufficient detail provided about the specific content or nature of the Royal Office statement to assess any behavioral dimensions.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8249,12 +8249,12 @@
           "confidence": null
         }
       },
-      "rationale": "Event text is only a headline about criticism without describing any specific presidential action or behavior to analyze",
+      "rationale": "The evidence provided is only a French editorial headline about criticisms of President Gnassingbé without specific observable presidential actions or behaviors to analyze.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8349,12 +8349,12 @@
           "confidence": null
         }
       },
-      "rationale": "Opinion piece header provides no observable evidence of presidential behavioral signals",
+      "rationale": "Opinion piece headline provides no observable presidential behavioral signals to measure",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8603,8 +8603,8 @@
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8649,12 +8649,12 @@
           "confidence": null
         }
       },
-      "rationale": "Event describes a cultural festival launch with no observable presidential leadership signals or dismissal actions",
+      "rationale": "Event describes a cultural festival launch with no observable presidential leadership signals related to the measured dimensions.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -8849,12 +8849,12 @@
           "confidence": null
         }
       },
-      "rationale": "Event describes victim advocacy actions rather than observable presidential behavior or decisions.",
+      "rationale": "Event description only mentions victims pushing for justice with no observable presidential action or response.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -9099,12 +9099,12 @@
           "confidence": null
         }
       },
-      "rationale": "This is a criticism statement by an external actor about the president, not an observable presidential leadership action or behavior.",
+      "rationale": "Evidence only contains an opposition statement criticizing the president with no observable presidential behavioral signals.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -9549,12 +9549,12 @@
           "confidence": null
         }
       },
-      "rationale": "Evidence describes escort activities and general public appeals without observable signals for any behavioral dimension.",
+      "rationale": "The brief text provides insufficient detail about specific presidential actions or behaviors to score any dimension reliably.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -9599,12 +9599,12 @@
           "confidence": null
         }
       },
-      "rationale": "The provided text appears to be a headline only without sufficient detail about observable presidential actions or behaviors to score any dimension.",
+      "rationale": "Headline only provides a political statement without observable institutional actions or specific behavioral signals to measure.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -9699,12 +9699,12 @@
           "confidence": null
         }
       },
-      "rationale": "Statement about potential endorsement contains no observable presidential behavioral signals across any measured dimensions.",
+      "rationale": "Statement about potential endorsement provides no observable evidence of presidential behavioral signals across any measured dimensions.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
@@ -9799,12 +9799,12 @@
           "confidence": null
         }
       },
-      "rationale": "Statement only contains Miles Sampa's characterization of his dismissal without observable presidential leadership signals",
+      "rationale": "Statement represents personal complaint from dismissed individual without observable presidential behavioral signals.",
       "needs_scoring": false,
       "needs_llm_review": false,
       "model_version": "claude-sonnet-4-20250514",
-      "scoring_date": "2026-06-06",
-      "scoring_run_id": "5c2180fb",
+      "scoring_date": "2026-06-09",
+      "scoring_run_id": "90191cf7",
       "prompt_version": "6106c3ea"
     },
     {
