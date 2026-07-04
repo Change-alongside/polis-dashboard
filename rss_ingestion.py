@@ -779,7 +779,7 @@ RSS_FEEDS = {
 }
 
 # Validate no duplicates — critical check
-assert len(RSS_FEEDS) == 53, f"Expected 53 unique countries, got {len(RSS_FEEDS)}. Check for duplicates."
+assert len(RSS_FEEDS) == 54, f"Expected 53 unique countries, got {len(RSS_FEEDS)}. Check for duplicates."
 
 # =============================================================================
 # FETCH + DEDUPLICATE
