@@ -344,7 +344,7 @@ body::before{{content:'';position:fixed;top:0;left:0;right:0;height:3px;backgrou
     <div>{today}</div>
     <div>{total} events on record</div>
     <div>{countries_n} countries covered</div>
-    <div><em>model · claude-sonnet-4-20250514</em></div>
+    <div><em>model · claude-sonnet-4-5</em></div>
   </div>
 </div>
 <div class="slabel">Presidential Scorecards</div>
@@ -413,7 +413,7 @@ def generate_synthesis(country, president, p_df):
     )
     try:
         payload = json.dumps({
-            "model":      "claude-sonnet-4-20250514",
+            "model":      "claude-sonnet-4-5",
             "max_tokens": 500,
             "messages":   [{"role": "user", "content": prompt}]
         }, ensure_ascii=False).encode("utf-8")
@@ -655,7 +655,7 @@ with tab2:
                             )
                         st.write(narrative)
                         st.caption(
-                            "Model: claude-sonnet-4-20250514 | "
+                            "Model: claude-sonnet-4-5 | "
                             "Source: observable news signals only"
                         )
 
@@ -1058,6 +1058,6 @@ with tab3:
     )
     st.caption(
         "Dataset version: 1.0 · Extractor: v8 · Reviewer: v3.0 · "
-        "Model: claude-sonnet-4-20250514 · "
+        "Model: claude-sonnet-4-5 · "
         "Principal-agent theory + Public leadership + Neopatrimonialism"
     )
