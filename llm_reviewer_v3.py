@@ -87,7 +87,7 @@ Evidence: {evidence}"""
     for attempt in range(1, MAX_RETRIES + 1):
       try:
         payload = json.dumps({
-            "model": "claude-sonnet-4-20250514",
+            "model": "claude-sonnet-4-5",
             "max_tokens": 300,
             "messages": [{"role": "user", "content": prompt}]
         }, ensure_ascii=False).encode("utf-8")
@@ -158,7 +158,7 @@ Evidence: {evidence}"""
 
 def run_scoring():
     # Scoring provenance — frozen per run for reproducibility
-    MODEL_VERSION   = "claude-sonnet-4-20250514"
+    MODEL_VERSION   = "claude-sonnet-4-5"
     SCORING_DATE    = datetime.utcnow().strftime("%Y-%m-%d")
     SCORING_RUN_ID  = str(uuid.uuid4())[:8]
     PROMPT_VERSION  = hashlib.sha256(
