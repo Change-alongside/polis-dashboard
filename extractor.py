@@ -319,38 +319,50 @@ DOMAIN_MAP = {
     "security":   ["security","army","military","terror","attack","weapon","coup",
                    "insurgent","conflict","defence","defense","boko haram","al-shabaab",
                    "armed forces","ceasefire","peacekeeping","sovereignty","troop",
+                   "police","forces","commander","deployment","patrol","garrison",
                    "sécurité","armée","militaire","أمن","جيش"],
     "economy":    ["economy","budget","fund","tax","revenue","inflation","finance",
                    "trade","investment","loan","debt","imf","gdp","infrastructure",
                    "railway","road","energy","power","electricity","gas","oil",
                    "housing","construction","contract","procurement","billion","million",
+                   "allocation","pension","gratuity","salary","wage","benefit",
+                   "agricultural","farming","harvest","food security","napsa",
+                   "social security","subsidy","tariff","export","import","market",
                    "économie","investissement","milliard","اقتصاد","استثمار","مليار"],
     "justice":    ["court","law","justice","verdict","sentence","ruling","convict",
                    "acquit","tribunal","corruption","fraud","prosecution","impeach",
                    "accountability","anti-corruption","laundering","charges","criminal",
-                   "tribunal","justice","corruption","condamné","محكمة","فساد"],
+                   "judge","judicial","attorney","lawsuit","indicted","arrested",
+                   "condamné","محكمة","فساد"],
     "health":     ["health","hospital","disease","medical","vaccine","clinic",
-                   "pandemic","cholera","malaria","maternal","childbirths",
-                   "santé","hôpital","vaccin","صحة","مستشفى","لقاح"],
+                   "pandemic","cholera","malaria","maternal","ebola","hiv","aids",
+                   "nutrition","sanitation","water","santé","hôpital","vaccin",
+                   "صحة","مستشفى","لقاح"],
     "education":  ["education","school","university","student","curriculum","teacher",
-                   "scholarship","digitisation","learner","academic",
-                   "éducation","école","université","تعليم","مدرسة"],
+                   "scholarship","digitisation","learner","academic","literacy",
+                   "training","skills","éducation","école","université","تعليم","مدرسة"],
     "governance": ["minister","appoint","cabinet","dismiss","parliament","senate",
                    "government","presidency","constitution","reform","restructure",
                    "policy","legislation","bill","decree","executive","reshuffle",
-                   "ministre","parlement","gouvernement","décret","نomme","وزير","حكومة"],
+                   "state house","inauguration","swearing","oath","public holiday",
+                   "national day","commission","committee","directive","administration",
+                   "minister","ministre","parlement","gouvernement","décret","وزير","حكومة"],
     "elections":  ["election","vote","ballot","campaign","electoral","polling",
-                   "by-election","candidate","gubernatorial"],
+                   "by-election","candidate","gubernatorial","endorse","party",
+                   "constituency","nomination","primaries","manifesto","contest",
+                   "voter registration","electoral commission"],
     "diplomacy":  ["diplomatic","bilateral","summit","treaty","agreement","foreign",
                    "embassy","delegation","visit","cooperation","ambassador",
-                   "partnership","multilateral","african union","ecowas",
+                   "partnership","multilateral","african union","ecowas","united nations",
+                   "state visit","communique","protocol",
                    "sommet","accord","bilatéral","délégation","قمة","اتفاقية"],
     "community":  ["community","citizens","dialogue","consultation","indaba",
                    "harambee","ubuntu","grassroots","participat","town hall",
                    "inclusive","stakeholder","civil society","public engagement",
-                   "dialogue","consultation","حوار","تشاور"],
+                   "diaspora","forum","outreach","local government","district",
+                   "حوار","تشاور"],
     "media":      ["press freedom","journalist","media","censored","broadcast",
-                   "freedom of expression","disinformation"],
+                   "freedom of expression","disinformation","fake news","propaganda"],
 }
 
 def detect_domain(text: str) -> str:
@@ -384,6 +396,113 @@ def detect_framing(text: str) -> str:
     scores = {f: sum(1 for k in kws if k in t) for f, kws in FRAMING_MAP.items()}
     best = max(scores, key=scores.get)
     return best if scores[best] > 0 else "neutral"
+
+# =========================================================
+# FIX 1: TIGHTENED 4-THEORY CLASSIFIER
+# Transformational now requires explicit systemic/visionary signals
+# =========================================================
+THEORY_RULES = [
+    # UBUNTU — community, relational, participatory
+    (["community_engagement"],
+     ["community", "governance", "health", "education", "general"],
+     "ubuntu", "proactive",
+     "Community engagement signals relational Ubuntu-grounded leadership"),
+
+    (["public_statement"],
+     ["community"],
+     "ubuntu", "proactive",
+     "Community-directed communication signals Ubuntu responsiveness"),
+
+    # ETHICAL — accountability, rule of law, integrity
+    (["judicial_ruling"],
+     ["justice", "governance"],
+     "ethical", "proactive",
+     "Judicial ruling signals institutional accountability"),
+
+    (["enforcement"],
+     ["justice", "governance", "security"],
+     "ethical", "proactive",
+     "Enforcement action signals rule-of-law leadership"),
+
+    (["dismissal"],
+     ["governance", "justice"],
+     "ethical", "proactive",
+     "Dismissal of officials signals accountability and integrity"),
+
+    # SERVANT — citizen welfare, direct service delivery
+    (["policy"],
+     ["health", "education"],
+     "servant", "proactive",
+     "Policy in welfare domains signals citizen-centred servant leadership"),
+
+    (["public_statement"],
+     ["health", "education"],
+     "servant", "reactive",
+     "Welfare communication signals servant responsiveness"),
+
+    # TRANSFORMATIONAL — only for clearly visionary/systemic signals
+    # NOT a default catch-all
+    (["appointment"],
+     ["governance", "security", "diplomacy"],
+     "transformational", "proactive",
+     "Strategic appointment signals institutional transformation intent"),
+
+    (["policy"],
+     ["governance", "diplomacy", "security"],
+     "transformational", "proactive",
+     "Strategic policy signals systemic leadership vision"),
+
+    (["public_statement"],
+     ["diplomacy", "economy"],
+     "transformational", "neutral",
+     "Strategic economic or diplomatic statement signals transformational framing"),
+
+    (["dismissal"],
+     ["security", "diplomacy"],
+     "transformational", "proactive",
+     "High-level dismissal in strategic domain signals restructuring"),
+
+    # SERVANT for economy — welfare-oriented economic policy
+    (["policy"],
+     ["economy"],
+     "servant", "proactive",
+     "Economic policy signals welfare-oriented servant leadership"),
+]
+
+def rule_based_theory(action_type: str, evidence_text: str) -> dict:
+    detected_domain = detect_domain(evidence_text)
+    framing = detect_framing(evidence_text)
+
+    for action_types, domains, theory, mode, rationale in THEORY_RULES:
+        if action_type in action_types:
+            if detected_domain in domains:
+                return {
+                    "primary_theory":   theory,
+                    "secondary_theory": "none",
+                    "domain":           detected_domain,
+                    "leadership_mode":  mode,
+                    "framing":          framing,
+                    "rationale":        rationale,
+                    "needs_llm_review": False,
+                }
+
+    # Public statements in general domain = transformational (methodologically grounded)
+    (["public_statement"],
+     ["general"],
+     "transformational", "neutral",
+     "Presidential public statement signals transformational discourse"),
+
+    # FIX 1: No more automatic transformational default
+    # Anything unmatched goes to LLM review
+    return {
+        "primary_theory":   "unclear",
+        "secondary_theory": "none",
+        "domain":           detected_domain,
+        "leadership_mode":  "neutral",
+        "framing":          framing,
+        "rationale":        "No theory rule matched — flagged for LLM review",
+        "needs_llm_review": True,
+    }
 
 CURRENT_PRESIDENTS = {
     "Algeria": "Tebboune", "Egypt": "Sisi", "Libya": "Menfi",
@@ -524,56 +643,39 @@ def process_article(article: dict) -> dict:
     if score < MIN_SCORE:
         return {"is_leadership_event": False}
 
-    import hashlib
     president = resolve_president(country)
     evidence  = article.get("title", "")[:140]
     date_str  = parse_date(article.get("published", ""))
-    domain    = detect_domain(evidence)
-    framing   = detect_framing(evidence)
+    theory    = rule_based_theory(action_type, evidence)
 
-    # Stable event_id — consistent with reviewer v3 matching logic
-    event_id  = hashlib.sha256(
-        (evidence + country).encode("utf-8")
-    ).hexdigest()[:16]
-
-    log("  [LSE] " + action_type + " | " + domain
+    log("  [" + ("UNCLEAR" if theory["needs_llm_review"] else "OK") + "] "
+        + theory["primary_theory"] + " | " + theory["domain"]
         + " | " + country + " | " + evidence[:45])
 
     return {
-        # --- Identity ---
         "is_leadership_event":  True,
-        "event_id":             event_id,
         "date":                 date_str,
         "week":                 get_week(date_str),
         "month":                get_month(date_str),
-        # --- Actor ---
         "country":              country,
         "president":            president,
         "actor":                actor,
         "actor_type":           actor_type,
-        # --- Action ---
         "action_type":          action_type,
-        "domain":               domain,
-        "framing":              framing,
-        # --- Signal quality ---
-        "filter_score":         score,
+        "primary_theory":       theory["primary_theory"],
+        "secondary_theory":     theory["secondary_theory"],
+        "domain":               theory["domain"],
+        "leadership_mode":      theory["leadership_mode"],
+        "framing":              theory["framing"],
+        "rationale":            theory["rationale"],
+        "needs_llm_review":     theory["needs_llm_review"],
+        "confidence_score":     score,
         "source_tier":          source_tier,
         "source_bias":          source_bias,
         "feed_count":           get_feed_count(country),
-        # --- Evidence ---
         "context":              "governance",
         "evidence":             evidence,
         "link":                 article.get("link", ""),
-        # --- Dimension scoring (populated by llm_reviewer_v3.py) ---
-        "dimensions":           {
-            "accountability":        {"score": None, "confidence": None},
-            "responsiveness":        {"score": None, "confidence": None},
-            "stewardship":           {"score": None, "confidence": None},
-            "institutional_integrity": {"score": None, "confidence": None},
-            "inclusion":             {"score": None, "confidence": None},
-        },
-        "rationale":            None,
-        "needs_scoring":        True,
     }
 
 def load_existing() -> list:
@@ -581,140 +683,24 @@ def load_existing() -> list:
         return []
     with open(DATASET_FILE, "r") as f:
         existing = json.load(f)
-    import hashlib
-    # Support both flat array (legacy) and metadata-wrapped structure
-    if isinstance(existing, dict) and "events" in existing:
-        existing = existing["events"]
     events = [e for e in existing if e.get("is_leadership_event")]
+    INVALID = {"transactional", "situational", "authoritarian"}
     for e in events:
-        # Backfill structural fields for legacy events
         if "framing"     not in e: e["framing"]     = detect_framing(e.get("evidence",""))
         if "week"        not in e: e["week"]         = get_week(e.get("date",""))
         if "month"       not in e: e["month"]        = get_month(e.get("date",""))
         if "source_bias" not in e: e["source_bias"]  = "independent"
         if "feed_count"  not in e: e["feed_count"]   = get_feed_count(e.get("country",""))
-
-        # Backfill event_id for legacy events lacking it
-        if "event_id" not in e:
-            raw = (e.get("evidence","") + e.get("country","")).encode("utf-8")
-            e["event_id"] = hashlib.sha256(raw).hexdigest()[:16]
-
-        # Backfill dimension placeholder for legacy events not yet scored
-        if "dimensions" not in e:
-            e["dimensions"] = {
-                "accountability":          {"score": None, "confidence": None},
-                "responsiveness":          {"score": None, "confidence": None},
-                "stewardship":             {"score": None, "confidence": None},
-                "institutional_integrity": {"score": None, "confidence": None},
-                "inclusion":               {"score": None, "confidence": None},
-            }
-            e["needs_scoring"] = True
-
-        # Re-detect domain for events stuck on general
+        if e.get("primary_theory") in INVALID:
+            e["primary_theory"]   = "unclear"
+            e["needs_llm_review"] = True
         if e.get("domain") == "general":
             new_domain = detect_domain(e.get("evidence",""))
             if new_domain != "general":
                 e["domain"] = new_domain
-
-        # Keep president names current
         correct = resolve_president(e.get("country",""))
         if correct: e["president"] = correct
-
     return events
-
-def update_metadata(data: dict, combined: list) -> dict:
-    """
-    Update the metadata block on every run.
-    Keeps dataset stats current without manual intervention.
-    """
-    import hashlib
-    from datetime import datetime, timezone
-
-    if not isinstance(data, dict):
-        # Legacy flat array — wrap it
-        data = {"metadata": {}, "events": data}
-
-    if "metadata" not in data:
-        data["metadata"] = {}
-
-    m = data["metadata"]
-
-    # Always update
-    m["polis_version"]      = "8.0"
-    m["dataset_version"]    = m.get("dataset_version", "1.0")
-    m["last_updated"]       = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    m["extractor_version"]  = "v8"
-    m["reviewer_version"]   = "v3.0"
-    m["scoring_model"]      = "claude-sonnet-4-20250514"
-
-    if "theoretical_framework" not in m:
-        m["theoretical_framework"] = {
-            "primary":    "Principal-agent theory",
-            "supporting": "Public leadership literature",
-            "contextual": "Neopatrimonialism (Bratton & van de Walle)"
-        }
-
-    if "dimensions" not in m:
-        m["dimensions"] = [
-            "accountability", "responsiveness", "stewardship",
-            "institutional_integrity", "inclusion"
-        ]
-
-    if "analytic_tensions" not in m:
-        m["analytic_tensions"] = [
-            "formal_institutions_vs_informal_power",
-            "centralisation_vs_accommodation",
-            "visibility_vs_action"
-        ]
-
-    # Recompute stats from current dataset
-    lse = [e for e in combined if e.get("is_leadership_event")]
-    countries = list(set(e.get("country","") for e in lse))
-    presidents = list(set(e.get("president","") for e in lse if e.get("president")))
-    domains = {}
-    for e in lse:
-        d = e.get("domain","general")
-        domains[d] = domains.get(d,0) + 1
-    scored = sum(1 for e in lse if any(
-        e.get("dimensions",{}).get(dim,{}).get("score") is not None
-        for dim in ["accountability","responsiveness","stewardship",
-                    "institutional_integrity","inclusion"]
-    ))
-
-    m["geographic_scope"] = {
-        "target_countries":   54,
-        "covered_countries":  len(countries),
-        "regions": ["North Africa","West Africa","Central Africa",
-                    "East Africa","Southern Africa"]
-    }
-
-    m["dataset_stats"] = {
-        "total_events":        len(combined),
-        "leadership_events":   len(lse),
-        "scored_events":       scored,
-        "needs_scoring":       sum(1 for e in lse if e.get("needs_scoring")),
-        "countries_with_data": len(countries),
-        "presidents_tracked":  len(presidents),
-        "domain_distribution": domains
-    }
-
-    if "observability_note" not in m:
-        m["observability_note"] = (
-            "Scores reflect observable signals in reported news events, "
-            "not governance outcomes. Absence of signal is not evidence "
-            "of absence of behaviour. Countries with fewer than 30 events "
-            "should be interpreted with caution."
-        )
-
-    if "citation" not in m:
-        m["citation"] = (
-            "POLIS - Public Leadership Observation & Insight System. "
-            "Change-alongside, 2026. https://polis-dashboard.streamlit.app"
-        )
-
-    data["metadata"] = m
-    return data
-
 
 def save_cumulative(new_results: list):
     existing       = load_existing()
@@ -729,40 +715,32 @@ def save_cumulative(new_results: list):
     ]
 
     combined = existing + new_events
-    # Wrap in metadata structure and update stats
-    wrapped = update_metadata({"events": combined}, combined)
-
     with open(DATASET_FILE, "w") as f:
-        json.dump(wrapped, f, indent=2, ensure_ascii=False)
+        json.dump(combined, f, indent=2)
 
+    theories = {}
     domains  = {}
-    needs_scoring = 0
-    scored = 0
     for e in combined:
+        t = e.get("primary_theory","unclear")
         d = e.get("domain","general")
-        domains[d] = domains.get(d,0) + 1
-        if e.get("needs_scoring"):
-            needs_scoring += 1
-        if "dimensions" in e and any(
-            e["dimensions"].get(dim,{}).get("score") is not None
-            for dim in ["accountability","responsiveness","stewardship",
-                        "institutional_integrity","inclusion"]
-        ):
-            scored += 1
+        theories[t] = theories.get(t,0) + 1
+        domains[d]  = domains.get(d,0) + 1
 
     print("=" * 55)
     print("NEW EVENTS ADDED:   " + str(len(new_events)))
     print("TOTAL IN DATASET:   " + str(len(combined)))
-    print("SCORED EVENTS:      " + str(scored))
-    print("NEEDS SCORING:      " + str(needs_scoring))
+    print("FLAGGED FOR REVIEW: " + str(sum(1 for e in combined if e.get("needs_llm_review"))))
+    print("\nTHEORY BREAKDOWN:")
+    for t, c in sorted(theories.items(), key=lambda x: -x[1]):
+        bar = "█" * min(c, 40)
+        print(f"  {t:<18} {c:>4}  {bar}")
     print("\nDOMAIN BREAKDOWN:")
     for d, c in sorted(domains.items(), key=lambda x: -x[1]):
-        print("  {:<15} {:>4}".format(d, c))
-    print("\nRun llm_reviewer_v3.py to score pending events.")
+        print(f"  {d:<15} {c:>4}")
 
 def main():
     print("=" * 60)
-    print("POLIS EXTRACTOR v8 — DIMENSION SCHEMA · 54 COUNTRIES")
+    print("POLIS EXTRACTOR v7 — 6 FIXES · 4 THEORIES · 54 COUNTRIES")
     print("=" * 60)
     articles = fetch_articles()
     articles = deduplicate_articles(articles)
