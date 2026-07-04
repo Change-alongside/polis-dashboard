@@ -1018,7 +1018,7 @@ with tab3:
         "depending on feed availability, and cross-country comparisons should account for this "
         "structural asymmetry. The dimensions were designed around what is observable through public "
         "reporting - a methodological choice grounded in what presidential leadership looks like "
-        "from the outside, which is what citizens, journalists, and policy actors experience. The pipeline has a structural positive bias: it captures observable governance actions more reliably than inaction, failure to deliver, or governance harm. Scores should be read as a floor, not a ceiling."
+        "from the outside, which is what citizens, journalists, and policy actors experience. The instrument was designed around presidential governance. Monarchies and transitional military administrations represent structural edge cases where dimensions such as accountability may be definitionally inapplicable — scores for these states should be interpreted with additional caution. The pipeline has a structural positive bias: it captures observable governance actions more reliably than inaction, failure to deliver, or governance harm. Scores should be read as a floor, not a ceiling."
     )
 
     st.divider()
